@@ -163,7 +163,7 @@ class Provider extends Base
 
     public static function vehicleRegistrationLocal()
     {
-        $local = static::randomElement(static::$registrationLocal);
+        $local = static::randomElement(array_keys(static::$registrationLocal));
         return $local . static::randomElement(static::$registrationLocal[$local]);
     }
 
