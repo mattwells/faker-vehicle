@@ -20,6 +20,15 @@ Then add `"mattwells/faker-vehicle": "dev-master"` to you `require` or `require-
 Finally you need to add the provider to Faker:
 
 ```
-$generator = \Faker\Factory::create();
-$generator->addProvider(new \MattWells\Faker\Vehicle\Provider($generator));
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \MattWells\Faker\Vehicle\Provider($generator));
+```
+
+## Usage
+
+```
+echo $faker->vehicleMake;         // Nissan
+echo $faker->vehicleModel;        // C Class
+echo $faker->vehicleModel('BMW'); // 3 Series
+echo $faker->vehicleRegistration; // XA13 LYE
 ```
