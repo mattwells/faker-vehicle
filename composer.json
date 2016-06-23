@@ -1,0 +1,19 @@
+{
+    "name": "mattwells/faker-vehicle",
+    "description": "Faker provider for vehicles",
+    "autoload": {
+        "psr-4": {
+            "MattWells\\Faker\\Vehicle\\": "src/"
+        }
+    },
+    "require": {
+        "fzaninotto/faker": "^1.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Wells",
+            "email": "matt@cantseethecode.com"
+        }
+    ]
+}

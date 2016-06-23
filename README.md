@@ -1,2 +1,3 @@
-# faker-vehicle
-Faker provider for random vehicle make/model and UK registration plate
+# Faker Vehicle Provider
+
+A provider for [Faker](https://github.com/fzaninotto/Faker#faker-internals-understanding-providers) to generate random vehicle makes & models as well as UK registration plate.
