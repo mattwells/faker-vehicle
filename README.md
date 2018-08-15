@@ -6,7 +6,7 @@ A provider for [Faker](https://github.com/fzaninotto/Faker#faker-internals-under
 
 This package is not available on Packagist, this means that in order to make Composer be aware of this package you will need to add this [repository to your `composer.json`](https://getcomposer.org/doc/05-repositories.md#vcs) like below:
 
-```
+```json
     "repositories": [
         {
             "type": "vcs",
@@ -19,14 +19,14 @@ Then add `"mattwells/faker-vehicle": "dev-master"` to your `require` or `require
 
 Finally you need to add the provider to Faker:
 
-```
+```php
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \MattWells\Faker\Vehicle\Provider($generator));
+$faker->addProvider(new \MattWells\Faker\Vehicle\Provider($faker));
 ```
 
 ## Usage
 
-```
+```php
 echo $faker->vehicleMake;         // Nissan
 echo $faker->vehicleModel;        // C Class
 echo $faker->vehicleModel('BMW'); // 3 Series
