@@ -151,6 +151,59 @@ class Provider extends Base
         'U', 'V', 'W', 'X', 'Y', 'Z',
     ];
 
+    protected static $licensePlateFormats = [
+        '### ####',
+        '### ??#',
+        '### ???',
+        '####',
+        '#### ??',
+        '######',
+        '####??',
+        '###-???',
+        '###?',
+        '###??',
+        '###???',
+        '###·?##',
+        '##-#####',
+        '##-####?',
+        '##-?###',
+        '##-??##',
+        '##? ###',
+        '##? ?##',
+        '##??###',
+        '#-#####',
+        '#-#####?',
+        '#-####?',
+        '#-?####',
+        '#-??###',
+        '#? #####',
+        '#? ?####',
+        '#?# ###',
+        '#?#-#?#',
+        '#?#??',
+        '#?? ###',
+        '#?? ?##',
+        '#??####',
+        '#??? ##',
+        '#???###',
+        '#??•??#',
+        '? ######',
+        '?##-???',
+        '?? ####',
+        '?? #####',
+        '??# ####',
+        '??# ?#?',
+        '??-####',
+        '??? ###',
+        '??? ####',
+        '??? ?##',
+        '???###',
+        '???####',
+        '???-###',
+        '???-####',
+        '??•#####',
+    ];
+
     public static function vehicleMake()
     {
         return static::randomElement(array_keys(static::$makesWithModels));
@@ -191,5 +244,10 @@ class Provider extends Base
         $sequence = static::vehicleRegistrationSequence();
 
         return "{$local}{$age} {$sequence}";
+    }
+
+    public static function vehicleLicensePlate()
+    {
+        return strtoupper(static::bothify(static::randomElement(static::$licensePlateFormats)));
     }
 }
